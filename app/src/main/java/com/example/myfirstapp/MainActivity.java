@@ -1,5 +1,6 @@
 package com.example.myfirstapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,19 +22,20 @@ public class MainActivity extends AppCompatActivity {
         myToast.show();
     }
 
+    @SuppressLint("SetTextI18n")
     public void countMe(View view){
         //Get the text view
-        TextView showCountTextView = (TextView) findViewById(R.id.textView2);
+        TextView showCountTextView = findViewById(R.id.textView2);
 
         //Get the value of the text view
         String countString = showCountTextView.getText().toString();
 
         //Convert value to a number and increment it
-        Integer count = Integer.parseInt(countString);
+        int count = Integer.parseInt(countString);
         count++;
 
         //Display the new value in the text view
-        showCountTextView.setText(count.toString());
+        showCountTextView.setText(Integer.toString(count));
     }
 
     public void randomMe(View view){
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         Intent randomIntent = new Intent(this, SecondActivity.class);
 
         //Get the text view that shows the count
-        TextView showCountTextView = (TextView) findViewById(R.id.textView2);
+        TextView showCountTextView = findViewById(R.id.textView2);
 
         //Get the value of the text view
         String countString = showCountTextView.getText().toString();

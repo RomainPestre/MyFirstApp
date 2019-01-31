@@ -1,5 +1,6 @@
 package com.example.myfirstapp;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -17,12 +18,13 @@ public class SecondActivity extends AppCompatActivity {
 
     private static final String TOTAL_COUNT = "total_count";
 
-    public void showRandomNumber(){
+    @SuppressLint("SetTextI18n")
+    private void showRandomNumber(){
         //Get the text view where the random number will be displayed
-        TextView randomView = (TextView) findViewById(R.id.textView_random);
+        TextView randomView = findViewById(R.id.textView_random);
 
         //Get the text view where the heading is displayed
-        TextView headingView = (TextView) findViewById(R.id.textView_label);
+        TextView headingView = findViewById(R.id.textView_label);
 
         //Get the count from the intent extras
         int count = getIntent().getIntExtra(TOTAL_COUNT, 0);

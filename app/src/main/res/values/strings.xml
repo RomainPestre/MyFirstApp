@@ -2,4 +2,8 @@
     <string name="app_name">My First App</string>
     <string name="main_text">0</string>
     <string name="random_heading">Here is a random number betwin 0 and %1d</string>
+    <string name="toast">Toast</string>
+    <string name="count">Count</string>
+    <string name="random">Random</string>
+    <string name="r">R</string>
 </resources>
